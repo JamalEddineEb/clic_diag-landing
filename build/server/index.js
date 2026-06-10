@@ -1360,9 +1360,9 @@ var server_manifest_default = {
 			"hasClientMiddleware": false,
 			"hasDefaultExport": true,
 			"hasErrorBoundary": true,
-			"module": "/assets/root-BHNvi6JM.js",
+			"module": "/assets/root-BeT5yYPf.js",
 			"imports": ["/assets/jsx-runtime-CMuTcSy_.js"],
-			"css": ["/assets/root-vOOQ9NBe.css"],
+			"css": ["/assets/root-BcDClsll.css"],
 			"clientActionModule": void 0,
 			"clientLoaderModule": void 0,
 			"clientMiddlewareModule": void 0,
@@ -1390,8 +1390,8 @@ var server_manifest_default = {
 			"hydrateFallbackModule": void 0
 		}
 	},
-	"url": "/assets/manifest-014a1109.js",
-	"version": "014a1109",
+	"url": "/assets/manifest-a8b7d90c.js",
+	"version": "a8b7d90c",
 	"sri": void 0
 };
 //#endregion
