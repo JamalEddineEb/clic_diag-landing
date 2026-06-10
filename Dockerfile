@@ -2,35 +2,36 @@
 FROM oven/bun:alpine AS builder
 WORKDIR /app
 
-# Accept build arguments
+# Accept build arguments for Supabase
 ARG VITE_SUPABASE_URL
 ARG VITE_SUPABASE_PUBLISHABLE_KEY
-
-# Set them as environment variables for Vite
 ENV VITE_SUPABASE_URL=$VITE_SUPABASE_URL
 ENV VITE_SUPABASE_PUBLISHABLE_KEY=$VITE_SUPABASE_PUBLISHABLE_KEY
 
-# Install dependencies
+# Install all dependencies (including dev dependencies needed for the build)
 COPY package.json bun.lock ./
 RUN bun install --frozen-lockfile
 
-# Build the application
+# Copy the rest of the code and build the React Router app
 COPY . .
 RUN bun run build
 
 
-# --- Stage 2: Serve ---
-FROM nginx:alpine
+# --- Stage 2: Production Runner ---
+FROM oven/bun:alpine
+WORKDIR /app
 
-# Remove default nginx static assets
-RUN rm -rf /usr/share/nginx/html/*
+ENV NODE_ENV=production
 
-# Copy the custom Nginx config
-COPY nginx.conf /etc/nginx/conf.d/default.conf
+# Copy package files and install ONLY production dependencies to keep the image tiny
+COPY package.json bun.lock ./
+RUN bun install --frozen-lockfile --production
 
-# Copy the built Vite assets
-COPY --from=builder /app/build /usr/share/nginx/html
+# Copy the build artifacts from the builder stage
+COPY --from=builder /app/build ./build
 
-EXPOSE 80
+# React Router usually defaults to port 3000
+EXPOSE 3000
 
-CMD ["nginx", "-g", "daemon off;"]
+# Run the standard start script defined in your package.json
+CMD ["bun", "run", "start"]
