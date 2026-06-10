@@ -108,7 +108,7 @@ export default function LandingPage() {
               <li><a href="#features" className="text-sm font-medium text-white/55 hover:text-white transition-colors">Fonctionnalites</a></li>
               <li><a href="#platform" className="text-sm font-medium text-white/55 hover:text-white transition-colors">Plateformes</a></li>
             </ul>
-            <button className="inline-flex items-center gap-2 bg-[#8ecfc5] hover:brightness-105 text-[#181d2d] px-5 py-2 rounded-lg font-semibold text-sm transition-all hover:-translate-y-[1px] hover:shadow-[0_6px_20px_rgba(142,207,197,.4)]">
+            <button className="inline-flex items-center gap-2 bg-[#8ecfc5] hover:brightness-105 text-[#181d2d] px-5 py-2 rounded-lg font-semibold text-sm transition-all hover:-translate-y-[1px]">
               Demander une demo
               <ArrowIcon />
             </button>
@@ -177,24 +177,28 @@ export default function LandingPage() {
                   </div>
                 </div>
 
-                <div className="absolute -bottom-6 -right-8 w-[185px] bg-white border border-[#181d2d]/10 rounded-[14px] p-[1.125rem] shadow-[0_20px_60px_rgba(0,0,0,.28)] animate-pdf-float z-10">
-                  <div className="flex items-center gap-2.5 pb-3 border-b border-[#f1f2f4] mb-3.5">
-                    <div className="w-[30px] h-[30px] bg-[#181d2d]/5 rounded-[7px] flex items-center justify-center shrink-0">
+                <div className="absolute -bottom-6 -right-12 w-[240px] bg-white border border-[#181d2d]/10 rounded-2xl p-5 shadow-[0_20px_60px_rgba(0,0,0,.28)] animate-pdf-float z-10">
+                  <div className="flex items-center gap-3 pb-4 border-b border-[#f1f2f4] mb-4">
+                    <div className="w-9 h-9 bg-[#181d2d]/5 rounded-lg flex items-center justify-center shrink-0">
                       <FilePdfIcon className="text-[#181d2d]" />
                     </div>
                     <div>
-                      <div className="text-[.7rem] font-bold text-[#181d2d]">Rapport_Diag.pdf</div>
-                      <div className="text-[.58rem] text-[#9ca3af] mt-[1px]">Généré · 12 pages</div>
+                      <div className="text-xs font-bold text-[#181d2d]">Rapport_Diag.pdf</div>
+                      <div className="text-[10px] text-[#9ca3af] mt-0.5">Généré · 12 pages</div>
                     </div>
                   </div>
-                  <div className="flex flex-col gap-[5px]">
-                    <div className="h-[5px] bg-[#e9eaec] rounded-[3px] w-[70%]"></div>
-                    <div className="h-[5px] bg-[#e9eaec] rounded-[3px] w-full"></div>
-                    <div className="h-[5px] bg-[#f3f4f6] rounded-[3px] w-[82%]"></div>
+                  
+                  <div className="flex flex-col gap-2">
+                    <div className="h-1.5 bg-[#e9eaec] rounded-full w-[70%]"></div>
+                    <div className="h-1.5 bg-[#e9eaec] rounded-full w-full"></div>
+                    <div className="h-1.5 bg-[#f3f4f6] rounded-full w-[82%]"></div>
                   </div>
-                  <div className="mt-2.5 pt-2.5 border-t border-[#f3f4f6] flex gap-[5px]">
-                    <div className="flex-1 h-[26px] bg-[#181d2d] rounded-md flex items-center justify-center text-[.58rem] font-bold text-white">Télécharger</div>
-                    <div className="flex-1 h-[26px] bg-[#f3f4f6] rounded-md"></div>
+                  
+                  <div className="mt-4 pt-4 border-t border-[#f3f4f6] flex gap-2.5">
+                    <div className="flex-1 h-8 bg-[#181d2d] rounded-lg flex items-center justify-center text-[10px] font-bold text-white cursor-pointer">
+                      Télécharger
+                    </div>
+                    <div className="flex-1 h-8 bg-[#f3f4f6] rounded-lg cursor-pointer"></div>
                   </div>
                 </div>
               </div>
@@ -572,7 +576,7 @@ export default function LandingPage() {
           </h2>
           <p className="text-[1.075rem] text-white/45 leading-[1.7] mb-12">Rejoignez les professionnels qui gagnent déja des heures sur chaque rapport technique.</p>
           <div className="flex items-center justify-center">
-            <button className="inline-flex items-center justify-center gap-2 bg-[#8ecfc5] hover:brightness-105 text-[#181d2d] px-7 py-3 rounded-lg font-semibold text-base transition-all hover:-translate-y-[1px] hover:shadow-[0_6px_20px_rgba(142,207,197,.4)]">
+            <button className="inline-flex items-center justify-center gap-2 bg-[#8ecfc5] hover:brightness-105 text-[#181d2d] px-7 py-3 rounded-lg font-semibold text-base transition-all hover:-translate-y-[1px]">
               Demander une démonstration
               <ArrowIcon />
             </button>
