@@ -30,4 +30,4 @@ COPY --from=builder /app/build ./build
 
 EXPOSE 3000
 
-CMD ["bun", "run", "start"]
+CMD ["bun", "run", "./build/server/index.js"]
