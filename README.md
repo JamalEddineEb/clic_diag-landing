@@ -86,4 +86,7 @@ This template comes with [Tailwind CSS](https://tailwindcss.com/) already config
 
 Built with ❤️ using React Router.
 # clic_diag-landing
+<<<<<<< HEAD
 # clic_diag-landing
+=======
+>>>>>>> 34c49cc1a61ce07355d98a7c85802aa8521a97a9

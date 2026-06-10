@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # dependencies (bun install)
 node_modules
 
@@ -32,3 +33,12 @@ report.[0-9]_.[0-9]_.[0-9]_.[0-9]_.json
 
 # Finder (MacOS) folder config
 .DS_Store
+=======
+.DS_Store
+.env
+/node_modules/
+
+# React Router
+/.react-router/
+/build/
+>>>>>>> 34c49cc1a61ce07355d98a7c85802aa8521a97a9
