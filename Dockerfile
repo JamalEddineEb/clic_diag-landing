@@ -19,7 +19,7 @@ FROM nginx:alpine
 
 # Copy only the compiled static assets from the builder stage
 # Note: Vite outputs to 'dist' by default. Change to 'build' if needed.
-COPY --from=builder /app/dist /usr/share/nginx/html
+COPY --from=builder /app/build /usr/share/nginx/html
 
 # Expose standard web port
 EXPOSE 80
